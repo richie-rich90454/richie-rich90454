@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @richie-rich90454
 - 👀 I’m interested in all technological things if they interest me and are actually technological and unique!
-- 🌱 I’m currently learning Java, JavaScript (with React and Node.js), HTML/CSS, Python, C/C++, etc.
+- 🌱 I’m currently learning Java, JavaScript (with React and Node.js), HTML/CSS, Python, C/C++, Rust, etc.
 - 💞️ I’m looking to collaborate on any project, as long as they have a meaning.
 - 📫 How to reach me: If we are destined, we will meet.
 - 😄 Pronouns: He/Him
