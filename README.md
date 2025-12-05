@@ -7,6 +7,7 @@
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=richie-rich90454&theme=gruvbox&no-frame=true&column=7" alt="GitHub Trophies" />
 </p>
+
 ---
 ### Interests
 I am interested in all technological things if they are actually technological and unique!
