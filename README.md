@@ -16,7 +16,29 @@ I am comfortable with Java, web development (HTML, CSS, JavaScript, TypeScript a
 - Rust  
 - Python
 
+---
+
+<details>
+  <summary><strong>GitHub Stats</strong></summary>
+  <img src="https://github-readme-stats.vercel.app/api?username=richie-rich90454&show_icons=true&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="GitHub Stats" />
+</details>
+
+<details>
+  <summary><strong>Top Languages</strong></summary>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=richie-rich90454&layout=compact&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="Top Languages" />
+</details>
+
+<details>
+  <summary><strong>GitHub Streak</strong></summary>
+  <img src="https://streak-stats.demolab.com?user=richie-rich90454&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="GitHub Streak" />
+</details>
+
+<details>
+  <summary><strong>GitHub Trophies</strong></summary>
+  <img src="https://github-profile-trophy.vercel.app/?username=richie-rich90454&theme=radical&no-frame=true" onerror="this.closest('details').style.display='none'" alt="GitHub Trophies" />
+</details>
+
 ### Activity
 Here is a look at my recent contribution patterns:
 
-![Richie's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=richie-rich90454&theme=github)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=richie-rich90454&theme=github)
