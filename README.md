@@ -1,44 +1,51 @@
-👋 Hi, I am @richie-rich90454
+# Hi there 👋
 
-### About Me
-I am a high school student who builds things for the simple reason that they are fun and interesting.
+I am **Richard** ([@richie-rich90454](https://github.com/richie-rich90454)).
 
-### Interests
-I am interested in all technological things if they are actually technological and unique. If something feels fresh or genuinely novel, I want to be working on it.
+## About Me
 
-### Skills
-I am comfortable with Java, web development (HTML, CSS, JavaScript, TypeScript and Node.js), and a handful of other tools I have picked up along the way.
+I am a high school student who builds software because I find it genuinely interesting. I enjoy exploring unfamiliar ideas, learning new technologies, and creating projects that solve unusual problems or demonstrate interesting concepts.
 
-### Currently Learning
-- Go  
-- C  
-- C++  
-- Rust  
+## Interests
+
+I am interested in technology that is genuinely novel. Whether it is mathematics, algorithms, programming languages, scientific computing, chemistry, or developer tools, I enjoy understanding how things work and building software around them.
+
+## Skills
+
+- Java
+- HTML
+- CSS
+- JavaScript
+- TypeScript
+- Node.js
+
+## Currently Learning
+
+- C
+- C++
+- Go
+- Rust
 - Python
 
 ---
 
-<details>
-  <summary><strong>GitHub Stats</strong></summary>
-  <img src="https://github-readme-stats.vercel.app/api?username=richie-rich90454&show_icons=true&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="GitHub Stats" />
-</details>
+## Philosophy
 
-<details>
-  <summary><strong>Top Languages</strong></summary>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=richie-rich90454&layout=compact&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="Top Languages" />
-</details>
+I enjoy building software that is technically interesting, mathematically correct, and enjoyable to create. Most of my projects begin as experiments, with the goal of learning something new or solving a problem in a clean and elegant way.
 
-<details>
-  <summary><strong>GitHub Streak</strong></summary>
-  <img src="https://streak-stats.demolab.com?user=richie-rich90454&theme=radical&hide_border=true" onerror="this.closest('details').style.display='none'" alt="GitHub Streak" />
-</details>
+---
 
-<details>
-  <summary><strong>GitHub Trophies</strong></summary>
-  <img src="https://github-profile-trophy.vercel.app/?username=richie-rich90454&theme=radical&no-frame=true" onerror="this.closest('details').style.display='none'" alt="GitHub Trophies" />
-</details>
-
-### Activity
-Here is a look at my recent contribution patterns:
+## Activity
 
 ![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=richie-rich90454&theme=github)
+
+---
+## GitHub Statistics
+
+<p align="center">
+  <img height="170" src="https://ghstats.dev/api/card?username=richie-rich90454" alt="GitHub Statistics"/>
+</p>
+
+---
+
+Feel free to explore my repositories or reach out through GitHub if any of my projects interest you.
