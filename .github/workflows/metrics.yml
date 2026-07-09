@@ -9,7 +9,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           user: richie-rich90454
@@ -20,13 +20,13 @@ jobs:
           config_display: large
           plugin_languages: yes
           plugin_languages_ignored: html, css
-          plugin_languages_limit: 0
+          plugin_languages_limit: 8
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
           plugin_languages_analysis_timeout: 15
           plugin_isocalendar: yes
-          plugin_habits: yes
+          plugin_habits: no
           plugin_stars: yes
-          plugin_achievements: yes
+          plugin_achievements: no
           plugin_followup: yes
           config_order: base.header, isocalendar, habits, languages, achievements, stars, followup, repositories, community, activity, metadata
