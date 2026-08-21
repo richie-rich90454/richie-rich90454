@@ -1210,7 +1210,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>chenglou/pretext</span>
-                                        <span>starred 8 days ago</span>
+                                        <span>starred 9 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Fast, accurate &amp; comprehensive text measurement &amp; layout</div>
@@ -1263,7 +1263,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>astral-sh/uv</span>
-                                        <span>starred 9 days ago</span>
+                                        <span>starred 10 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">An extremely fast Python package and project manager, written in Rust.</div>
@@ -1297,7 +1297,7 @@
                                             <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
                                             <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>
                                         </svg>
-                                        9.23k
+                                        9.22k
                                     </div>
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -1316,7 +1316,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>JetBrains/compose-multiplatform</span>
-                                        <span>starred 15 days ago</span>
+                                        <span>starred 16 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Compose Multiplatform, a modern UI framework for Kotlin that makes building performant and beautiful user interfaces easy and enjoyable.</div>
@@ -1369,7 +1369,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>basishacks/basishacks-r2</span>
-                                        <span>starred 16 days ago</span>
+                                        <span>starred 17 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Website for Network Hackathon 2025-26 Season 2</div>
@@ -1663,7 +1663,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 20 Aug 2026, 18:09:58 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 21 Aug 2026, 05:42:10 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
