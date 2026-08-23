@@ -1226,7 +1226,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>chncaesar/opencode-db-clean</span>
-                                        <span>starred 12 hours ago</span>
+                                        <span>starred 24 hours ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Safely reclaim disk space from bloated OpenCode SQLite databases</div>
@@ -1279,7 +1279,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>chenglou/pretext</span>
-                                        <span>starred 10 days ago</span>
+                                        <span>starred 11 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Fast, accurate &amp; comprehensive text measurement &amp; layout</div>
@@ -1332,7 +1332,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>astral-sh/uv</span>
-                                        <span>starred 11 days ago</span>
+                                        <span>starred 12 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">An extremely fast Python package and project manager, written in Rust.</div>
@@ -1385,7 +1385,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>JetBrains/compose-multiplatform</span>
-                                        <span>starred 17 days ago</span>
+                                        <span>starred 18 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Compose Multiplatform, a modern UI framework for Kotlin that makes building performant and beautiful user interfaces easy and enjoyable.</div>
@@ -1685,7 +1685,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 22 Aug 2026, 18:11:41 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 23 Aug 2026, 05:35:49 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
