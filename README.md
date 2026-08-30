@@ -20,11 +20,6 @@ I am interested in technology that is genuinely novel. Whether it is mathematics
 ---
 ## Philosophy
 I enjoy building software that is technically interesting, mathematically correct, and enjoyable to create. Most of my projects begin as experiments, with the goal of learning something new or solving a problem in a clean and elegant way.
-
----
-## Activity
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=richie-rich90454&theme=github)
-
 ---
 ## GitHub Statistics
 ![Metrics](https://raw.githubusercontent.com/richie-rich90454/richie-rich90454/main/metrics.svg)
