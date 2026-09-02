@@ -43,7 +43,7 @@
                                     <rect class="day" x="150" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
                                     <rect class="day" x="165" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
                                     <rect class="day" x="180" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
-                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#ebedf0" rx="2" ry="2"/>
+                                    <rect class="day" x="195" y="0" width="11" height="11" fill="#9be9a8" rx="2" ry="2"/>
                                 </g>
                             </svg>
                         </div>
@@ -1118,14 +1118,14 @@
                         <rect x="0" y="0" width="920" height="8" fill="white" rx="5"/>
                     </mask>
                     <rect mask="url(#languages-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                    <rect mask="url(#languages-bar)" x="0" y="0" width="503.5623387041526" height="8" fill="#3178c6"/>
-                    <rect mask="url(#languages-bar)" x="503.5623387041526" y="0" width="190.26529972973847" height="8" fill="#f1e05a"/>
-                    <rect mask="url(#languages-bar)" x="693.827638433891" y="0" width="102.42551030749912" height="8" fill="#dea584"/>
-                    <rect mask="url(#languages-bar)" x="796.2531487413902" y="0" width="85.49291679720831" height="8" fill="#b07219"/>
-                    <rect mask="url(#languages-bar)" x="881.7460655385984" y="0" width="13.193854752256746" height="8" fill="#555555"/>
-                    <rect mask="url(#languages-bar)" x="894.9399202908552" y="0" width="8.901343591500071" height="8" fill="#00ADD8"/>
-                    <rect mask="url(#languages-bar)" x="903.8412638823553" y="0" width="8.544930439619685" height="8" fill="#f34b7d"/>
-                    <rect mask="url(#languages-bar)" x="912.3861943219749" y="0" width="7.613805678025053" height="8" fill="#A97BFF"/>
+                    <rect mask="url(#languages-bar)" x="0" y="0" width="503.5081967643763" height="8" fill="#3178c6"/>
+                    <rect mask="url(#languages-bar)" x="503.5081967643763" y="0" width="190.24389987613895" height="8" fill="#f1e05a"/>
+                    <rect mask="url(#languages-bar)" x="693.7520966405152" y="0" width="102.41399012526648" height="8" fill="#dea584"/>
+                    <rect mask="url(#languages-bar)" x="796.1660867657818" y="0" width="85.58428133664854" height="8" fill="#b07219"/>
+                    <rect mask="url(#languages-bar)" x="881.7503681024303" y="0" width="13.19237078980793" height="8" fill="#555555"/>
+                    <rect mask="url(#languages-bar)" x="894.9427388922383" y="0" width="8.900342423920025" height="8" fill="#00ADD8"/>
+                    <rect mask="url(#languages-bar)" x="903.8430813161583" y="0" width="8.543969359166834" height="8" fill="#f34b7d"/>
+                    <rect mask="url(#languages-bar)" x="912.3870506753251" y="0" width="7.612949324674881" height="8" fill="#A97BFF"/>
                 </svg>
                 <div class="row fill-width">
                     <section>
@@ -1137,7 +1137,7 @@
                                 TypeScript
                             </div>
                             <small>
-                                <div>54.74%</div>
+                                <div>54.73%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -1209,7 +1209,7 @@
                                 Java
                             </div>
                             <small>
-                                <div>9.29%</div>
+                                <div>9.3%</div>
                             </small>
                         </div>
                         <div class="field language details">
@@ -1243,7 +1243,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>microsoft/monaco-editor</span>
-                                        <span>starred 7 days ago</span>
+                                        <span>starred 8 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">A browser based code editor</div>
@@ -1296,7 +1296,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>chncaesar/opencode-db-clean</span>
-                                        <span>starred 10 days ago</span>
+                                        <span>starred 11 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Safely reclaim disk space from bloated OpenCode SQLite databases</div>
@@ -1349,7 +1349,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>chenglou/pretext</span>
-                                        <span>starred 20 days ago</span>
+                                        <span>starred 21 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">Fast, accurate &amp; comprehensive text measurement &amp; layout</div>
@@ -1402,7 +1402,7 @@
                                     </svg>
                                     <div class="name">
                                         <span>astral-sh/uv</span>
-                                        <span>starred 21 days ago</span>
+                                        <span>starred 22 days ago</span>
                                     </div>
                                 </div>
                                 <div class="field description">An extremely fast Python package and project manager, written in Rust.</div>
@@ -1565,7 +1565,7 @@
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                 <path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm1.43.75a4.002 4.002 0 01-7.86 0H.75a.75.75 0 110-1.5h3.32a4.001 4.001 0 017.86 0h3.32a.75.75 0 110 1.5h-3.32z"/>
                             </svg>
-                            22840 Commits
+                            22856 Commits
                         </div>
                         <div class="field">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -1702,7 +1702,7 @@
             </section>
             <footer>
                 <span>These metrics include private contributions</span>
-                <span>Last updated 1 Sept 2026, 19:54:09 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
+                <span>Last updated 2 Sept 2026, 08:58:54 (timezone America/Los_Angeles) with lowlighter/metrics@3.34.0</span>
             </footer>
         </div>
         <div xmlns="http://www.w3.org/1999/xhtml" id="metrics-end"></div>
