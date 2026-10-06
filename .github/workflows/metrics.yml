@@ -2,41 +2,84 @@ name: Metrics
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "17 0 * * *"
   workflow_dispatch:
   push:
     branches:
       - main
 
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+
     permissions:
       contents: write
 
     steps:
-      - uses: lowlighter/metrics@v3.34
+      - name: Generate GitHub metrics
+        uses: lowlighter/metrics@v3.34
         with:
           token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+
           user: richie-rich90454
-          template: classic
-          base: header, activity, community, metadata
-          config_timezone: America/Los_Angeles
           filename: metrics.svg
+
+          template: classic
+          base: header, activity, community, repositories, metadata
+
+          config_timezone: America/Los_Angeles
           config_display: large
+
+          # Only inspect the repositories that matter for the profile.
+          repositories: 50
+          repositories_batch: 50
+          repositories_affiliations: owner
+          repositories_forks: no
+
+          # Stop early rather than burning the entire GraphQL quota.
+          quota_required_graphql: 500
+
+          # Commit identities to aggregate.
+          commits_authoring: >-
+            richie-rich90454,
+            rjiang880@gmail.com,
+            zhiyu.jiang90454-bisz@basischina.com
+
+          # Languages.
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
-          plugin_languages_details: percentage
-          plugin_languages_analysis_timeout: 600
-          plugin_languages_ignored: html, css
-          plugin_isocalendar: yes
-          plugin_habits: no
-          plugin_stars: yes
-          plugin_achievements: no
+          plugin_languages_details: percentage, lines
+          plugin_languages_ignored: >-
+            html,
+            css
+
+          # Keep indepth analysis, but make it bounded.
           plugin_languages_indepth: yes
+          plugin_languages_analysis_timeout: 15
+          plugin_languages_analysis_timeout_repositories: 5
+
+          # Full contribution calendar.
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+          # Repositories you have recently starred.
+          plugin_stars: yes
+          plugin_stars_limit: 5
+
+          # Follow-up activity.
           plugin_followup: yes
-          repositories_affiliations: ""
-          commits_authoring: richie-rich90454, rjiang880@gmail.com, zhiyu.jiang90454-bisz@basischina.com
-          committer_token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Disable coding-habit analysis.
+          plugin_habits: no
+
+          # Fail instead of producing a misleading partial image.
+          plugins_errors_fatal: yes
+
           debug: yes
