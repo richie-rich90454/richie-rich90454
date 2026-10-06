@@ -34,6 +34,7 @@ jobs:
           plugin_habits: no
           plugin_stars: yes
           plugin_achievements: no
+          plugin_languages_indepth: yes
           plugin_followup: yes
           repositories_affiliations: ""
           commits_authoring: richie-rich90454, rjiang880@gmail.com, zhiyu.jiang90454-bisz@basischina.com
