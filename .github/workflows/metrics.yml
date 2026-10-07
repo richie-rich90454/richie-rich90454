@@ -36,13 +36,13 @@ jobs:
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Only inspect the repositories that matter for the profile.
+          # Repository discovery
           repositories: 50
           repositories_batch: 50
           repositories_affiliations: owner
           repositories_forks: no
 
-          # Stop early rather than burning the entire GraphQL quota.
+          # Keep GraphQL usage bounded.
           quota_required_graphql: 500
 
           # Commit identities to aggregate.
@@ -51,7 +51,7 @@ jobs:
             rjiang880@gmail.com,
             zhiyu.jiang90454-bisz@basischina.com
 
-          # Languages.
+          # Language statistics.
           plugin_languages: yes
           plugin_languages_limit: 8
           plugin_languages_sections: most-used
@@ -60,16 +60,17 @@ jobs:
             html,
             css
 
-          # Keep indepth analysis, but make it bounded.
+          # More accurate language analysis, but bounded so one run
+          # cannot spend excessive time analyzing repositories.
           plugin_languages_indepth: yes
           plugin_languages_analysis_timeout: 15
           plugin_languages_analysis_timeout_repositories: 5
 
-          # Full contribution calendar.
+          # Full-year contribution calendar.
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-          # Repositories you have recently starred.
+          # Recently starred repositories.
           plugin_stars: yes
           plugin_stars_limit: 5
 
@@ -79,7 +80,7 @@ jobs:
           # Disable coding-habit analysis.
           plugin_habits: no
 
-          # Fail instead of producing a misleading partial image.
+          # Do not silently publish an incomplete/incorrect metrics file.
           plugins_errors_fatal: yes
 
           debug: yes
