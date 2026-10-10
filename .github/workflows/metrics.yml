@@ -35,7 +35,7 @@ jobs:
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Lower batch size — 100 repos/query times out and returns 0.
+          # Lower batch size to prevent GraphQL from timing out.
           repositories: 100
           repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
@@ -54,9 +54,15 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_details: percentage
-          plugin_languages_ignored: ""
+          # Only show programming languages; excludes markup and data categories.
+          plugin_languages_categories: programming
+          # Explicitly ignore additional non-programming languages.
+          plugin_languages_ignored: >-
+            css, html, plpgsql, tex, less, dockerfile, makefile, qmake,
+            lex, cmake, shell, gnuplot, batchfile, powershell,
+            jupyter notebook, scss, sass, stylus
           plugin_languages_other: yes
-          # Merge TSX → TypeScript and JSX → JavaScript.
+          # Combine TSX into TypeScript and JSX into JavaScript.
           plugin_languages_aliases: >-
             tsx:TypeScript,
             jsx:JavaScript
