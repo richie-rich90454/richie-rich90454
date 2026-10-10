@@ -31,11 +31,21 @@ jobs:
           filename: metrics.svg
           template: classic
 
+          # Commit to a dedicated branch to keep main history clean.
+          committer_branch: metrics
+
           base: header, activity, community, repositories, metadata
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Lower batch size to prevent GraphQL from timing out.
+          # Reduce output size.
+          config_base64: no
+          config_animations: no
+          optimize: css, xml
+
+          # Repository discovery.
+          # Check the log for "base > loaded N repositories" after running.
+          # If N is much less than 100, further reduce repositories_batch.
           repositories: 100
           repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
@@ -54,15 +64,22 @@ jobs:
           plugin_languages_sections: most-used
           plugin_languages_limit: 8
           plugin_languages_details: percentage
-          # Only show programming languages; excludes markup and data categories.
-          plugin_languages_categories: programming
-          # Explicitly ignore additional non-programming languages.
+
+          # Keep categories broad enough to include C, C++, and other
+          # compiled languages. Do NOT restrict to a single category.
+          plugin_languages_categories: programming, markup, data
+
+          # Explicitly ignore only non-programming languages.
+          # C and C++ are NOT in this list and will be displayed.
           plugin_languages_ignored: >-
             css, html, plpgsql, tex, less, dockerfile, makefile, qmake,
             lex, cmake, shell, gnuplot, batchfile, powershell,
             jupyter notebook, scss, sass, stylus
+
+          # Keep "Other" enabled so uncategorized languages still appear.
           plugin_languages_other: yes
-          # Combine TSX into TypeScript and JSX into JavaScript.
+
+          # Merge TSX into TypeScript and JSX into JavaScript.
           plugin_languages_aliases: >-
             tsx:TypeScript,
             jsx:JavaScript
