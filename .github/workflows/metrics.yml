@@ -35,25 +35,20 @@ jobs:
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Repository discovery.
-          # 200 is a practical upper bound, not unlimited discovery.
-          repositories: 200
-          repositories_batch: 100
+          # Lower batch size — 100 repos/query times out and returns 0.
+          repositories: 100
+          repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
           repositories_forks: yes
 
-          # Keep the quota guard to avoid starting when the remaining
-          # GraphQL quota is below this configured threshold.
           quota_required_graphql: 500
 
-          # Match your known commit identities.
           commits_authoring: >-
             richie-rich90454,
             rjiang880@gmail.com,
             zhiyu.jiang90454-bisz@basischina.com
 
-          # Main language breakdown only.
-          # In-depth cloning and commit analysis are disabled.
+          # Language analysis.
           plugin_languages: yes
           plugin_languages_indepth: no
           plugin_languages_sections: most-used
@@ -61,23 +56,20 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_ignored: ""
           plugin_languages_other: yes
+          # Merge TSX → TypeScript and JSX → JavaScript.
           plugin_languages_aliases: >-
             tsx:TypeScript,
             jsx:JavaScript
 
-          # Follow-up activity.
           plugin_followup: yes
           plugin_followup_indepth: no
 
-          # Contribution calendar.
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
 
-          # Starred repositories.
           plugin_stars: yes
           plugin_stars_limit: 5
 
-          # Do not spend resources on coding-habit analysis.
           plugin_habits: no
 
           plugins_errors_fatal: yes
