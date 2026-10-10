@@ -31,8 +31,9 @@ jobs:
           filename: metrics.svg
           template: classic
 
-          # Commit to a dedicated branch to keep main history clean.
-          committer_branch: metrics
+          # Commit to main. Do NOT set committer_branch unless the
+          # target branch already exists on the remote.
+          # committer_branch: metrics
 
           base: header, activity, community, repositories, metadata
           config_timezone: America/Los_Angeles
@@ -44,8 +45,8 @@ jobs:
           optimize: css, xml
 
           # Repository discovery.
-          # Check the log for "base > loaded N repositories" after running.
-          # If N is much less than 100, further reduce repositories_batch.
+          # If the log says "base > loaded 0 repositories", lower
+          # repositories_batch further (try 5).
           repositories: 100
           repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
@@ -65,18 +66,17 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_details: percentage
 
-          # Keep categories broad enough to include C, C++, and other
-          # compiled languages. Do NOT restrict to a single category.
-          plugin_languages_categories: programming, markup, data
+          # Only show programming languages. C and C++ are in this
+          # category and will be displayed once base loads repos.
+          plugin_languages_categories: programming
 
-          # Explicitly ignore only non-programming languages.
-          # C and C++ are NOT in this list and will be displayed.
+          # Explicitly ignore non-programming languages.
           plugin_languages_ignored: >-
             css, html, plpgsql, tex, less, dockerfile, makefile, qmake,
             lex, cmake, shell, gnuplot, batchfile, powershell,
             jupyter notebook, scss, sass, stylus
 
-          # Keep "Other" enabled so uncategorized languages still appear.
+          # Keep "Other" so uncategorized languages are still visible.
           plugin_languages_other: yes
 
           # Merge TSX into TypeScript and JSX into JavaScript.
