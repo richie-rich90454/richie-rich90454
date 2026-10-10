@@ -1,8 +1,9 @@
 name: Metrics
 
 on:
+  # Run once per day at 00:00 UTC.
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
   push:
     branches: [main, master]
@@ -30,20 +31,13 @@ jobs:
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Keep the SVG small.
-          config_base64: no
-          config_animations: no
-          optimize: css, xml
-
           # Repository discovery.
-          # Lower batch so the base plugin doesn't time out on accounts
-          # with many repositories. Check the log line
-          # "base > loaded N repositories" after running.
+          # Batch of 10 prevents the GraphQL timeout that returns 0
+          # repositories on accounts with many repos.
           repositories: 100
           repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
           repositories_forks: yes
-
           quota_required_graphql: 500
 
           commits_authoring: >-
@@ -58,19 +52,26 @@ jobs:
           plugin_languages_details: percentage
           plugin_languages_analysis_timeout: 15
 
-          # Directly exclude HTML and CSS.
-          plugin_languages_ignored: html, css
+          # Languages to drop from the chart entirely.
+          #   html, css              -- markup
+          #   tsx, jsx               -- keep them out of TypeScript /
+          #                             JavaScript so those two don't
+          #                             dominate the whole pie
+          #   powershell, plpgsql,
+          #   shell, batchfile,
+          #   makefile, dockerfile,
+          #   cmake, qmake, gnuplot  -- scripting / build config
+          plugin_languages_ignored: >-
+            html, css, tsx, jsx, powershell, plpgsql, shell,
+            batchfile, makefile, dockerfile, cmake, qmake, gnuplot
 
-          # CRITICAL: do NOT enable this. Setting it to "yes" merges
-          # every ignored language into a single "Other" slice, which
-          # both shows the languages you wanted hidden AND eats one of
-          # your 8 display slots. Leave it off (default is no).
-          # plugin_languages_other: yes   <-- REMOVED
+          # Do NOT set plugin_languages_other. Setting it to yes
+          # merges every ignored language into a single "Other" slice,
+          # which re-shows the languages you just hid and eats one of
+          # your 8 display slots.
 
-          # Merge TSX into TypeScript and JSX into JavaScript.
-          plugin_languages_aliases: >-
-            tsx:TypeScript,
-            jsx:JavaScript
+          # Do NOT set plugin_languages_aliases. Aliasing tsx -> ts or
+          # jsx -> js is what was inflating TypeScript and JavaScript.
 
           plugin_followup: yes
           plugin_followup_indepth: yes
@@ -80,23 +81,15 @@ jobs:
           plugin_lines_sections: base
           plugin_lines_repositories_limit: 4
 
-          plugin_people: yes
-          plugin_people_limit: 24
-          plugin_people_size: 28
-          plugin_people_types: followers
-          plugin_people_shuffle: yes
+          # Followers / people section removed.
 
+          plugin_traffic: yes
           plugin_introduction: yes
           plugin_introduction_title: yes
 
-          plugin_isocalendar: yes
-          plugin_isocalendar_duration: half-year
-
-          plugin_habits: no
-
           config_order: >-
-            base.header, introduction, languages, lines, people,
-            followup, community, activity, isocalendar, metadata
+            base.header, introduction, languages, lines, traffic,
+            followup, community, activity, metadata
 
           plugins_errors_fatal: yes
           debug: yes
