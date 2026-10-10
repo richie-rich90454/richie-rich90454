@@ -18,7 +18,7 @@ jobs:
 
     steps:
       - name: Generate GitHub metrics
-        uses: lowlighter/metrics@master
+        uses: gh-metrics/metrics@master
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
