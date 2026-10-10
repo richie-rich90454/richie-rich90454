@@ -31,22 +31,16 @@ jobs:
           filename: metrics.svg
           template: classic
 
-          # Commit to main. Do NOT set committer_branch unless the
-          # target branch already exists on the remote.
-          # committer_branch: metrics
-
           base: header, activity, community, repositories, metadata
           config_timezone: America/Los_Angeles
           config_display: large
 
-          # Reduce output size.
+          # Keep the SVG small.
           config_base64: no
           config_animations: no
           optimize: css, xml
 
           # Repository discovery.
-          # If the log says "base > loaded 0 repositories", lower
-          # repositories_batch further (try 5).
           repositories: 100
           repositories_batch: 10
           repositories_affiliations: owner, collaborator, organization_member
@@ -66,18 +60,19 @@ jobs:
           plugin_languages_limit: 8
           plugin_languages_details: percentage
 
-          # Only show programming languages. C and C++ are in this
-          # category and will be displayed once base loads repos.
+          # Only include programming languages. This alone removes
+          # HTML, CSS, Markdown, and other markup/data categories.
           plugin_languages_categories: programming
 
-          # Explicitly ignore non-programming languages.
+          # Explicitly ignore any programming-category languages you
+          # still don't want to see.
           plugin_languages_ignored: >-
-            css, html, plpgsql, tex, less, dockerfile, makefile, qmake,
-            lex, cmake, shell, gnuplot, batchfile, powershell,
-            jupyter notebook, scss, sass, stylus
+            plpgsql, shell, dockerfile, makefile, qmake, cmake,
+            batchfile, powershell, gnuplot
 
-          # Keep "Other" so uncategorized languages are still visible.
-          plugin_languages_other: yes
+          # CRITICAL: with other: yes, every language in `ignored` is
+          # merged into a giant "Other" slice. Set to no to drop them.
+          plugin_languages_other: no
 
           # Merge TSX into TypeScript and JSX into JavaScript.
           plugin_languages_aliases: >-
